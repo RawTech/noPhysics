@@ -6,6 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBurnEvent;
 import org.bukkit.event.block.BlockFadeEvent;
 import org.bukkit.event.block.BlockGrowEvent;
+import org.bukkit.event.block.BlockIgniteEvent;
 import org.bukkit.event.block.BlockSpreadEvent;
 
 public class BlockListener implements Listener {
@@ -35,6 +36,11 @@ public class BlockListener implements Listener {
 
     @EventHandler
     public void onBlockGrow(BlockGrowEvent event) {
+        event.setCancelled(true);
+    }
+    
+    @EventHandler
+    public void onBlockIgnite(BlockIgniteEvent event) {
         event.setCancelled(true);
     }
 }
