@@ -11,10 +11,7 @@ import org.bukkit.event.block.BlockSpreadEvent;
 
 public class BlockListener implements Listener {
 
-    public static RawTechNoPhysics plugin;
-
-    public BlockListener(RawTechNoPhysics instance) {
-        plugin = instance;
+    public BlockListener() {
     }
 
     @EventHandler
